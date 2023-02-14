@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create</title>
+</head>
+<body>
+	<div class="box">
+		<form (ngSubmit)="createUser()">
+			<h2>Create User</h2>
+			<div class="inputBox">
+				<input type="text" [(ngModel)]="username" name="username" required="required">
+				<span>Username</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="text" [(ngModel)]="job" name="job" required="required">
+				<span>Job</span>
+				<i></i>
+			</div>
+			<div class="links">
+			</div>
+			<input type="submit" value="Create">
+			<input type="submit" value="Back "  [routerLink]="['/users']" >
+		</form>
+		
+	</div>
+</body>
+</html>

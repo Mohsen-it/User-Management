@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" style="width: 18rem;" *ngIf="user" >
+        <img class="card-img-top" [src]="user.avatar" alt="Card image cap" >
+        <div class="card-body">
+            Id: {{ user.id }}<br>
+            First Name: {{ user.first_name }}<br>
+            Last Name: {{ user.last_name }}<br>
+            Email: {{ user.email }}
+          <a  class="btn btn-primary" [routerLink]="['/users']">Back to Users List</a>
+          <a  class="btn btn-danger" (click)="deleteUser()">Delete</a>
+
+        </div>
+      </div> 
+     
+</body>
+</html>
